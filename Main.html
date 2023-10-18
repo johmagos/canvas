@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>MDN canvas tutorial</title> 
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1> My canvas </h1>
+</header>
+
+<div id="main">
+    <canvas id="tutorial" role="pratice" width="500" height = "500"></canvas>
+</div>
+
+<script>
+    function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+            const ctx = canvas.getContext("2d");
+
+            const rectangle = new Path2D();
+            rectangle.rect(10, 10, 50, 50);
+
+            const circle = new Path2D();
+            circle.arc(100, 35, 25, 0, 2 * Math.PI);
+
+            ctx.stroke(rectangle);
+            ctx.fill(circle);
+
+
+
+    }
+
+    // create object
+    // create event listener for click
+    //  get context from click and locate clicked object
+    //  object is now 'selected'
+    // create key on key down listeners
+        // up, down, left,right
+    // create move function
+        // takes selected object, key stroke
+        // applies tranlatation to selected oject
+        // in key stroke direction 
+        // at x => y rate, 
+    // initial draw at center of canvas
+
+    
+}
+draw()
+</script>
+
+<footer>
+    <h3> that's all folks. </h3>
+</footer>
+
+</body>
